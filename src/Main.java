@@ -1,31 +1,24 @@
 import java.util.Scanner;
 
-import javax.naming.event.NamingExceptionEvent;
-
 public class Main {
-    public static void main(String[] args) {
+    public static <DataTimeFormatter> void main(String[] args) {
 
         Scanner taja = new Scanner(System.in);
 
-        int a, b;
-        a = taja.nextInt();
-        b = taja.nextInt();
+        int h, m, s;
+        
+        h = taja.nextInt();
+        m = taja.nextInt();
+        s = taja.nextInt();
 
-        if (a > b) {
-            System.out.println(">");
+       int min = h * 60 + m;
+       min += s;
 
-        } 
-        if (a < b)
-        {
-            System.out.println("<");
-        }
-        if (a == b)
-            
-        {
-            System.out.println("==");
-        }
+       int hour = (min/60)%24;
 
-        // return 0;
+       int mint = min%60;
+
+        System.out.println(hour + " " + mint);
 
     }
 }
