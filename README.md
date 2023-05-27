@@ -1,3 +1,3 @@
 ## 백준 코드 연습
-[Baekjoon](https://www.acmicpc.net/)
+[Baekjoon](https://acmicpc.net/)
 - ID : leeban21
