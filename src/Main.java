@@ -1,9 +1,7 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Main {
-
-
-
 
    // 첫째 줄에 정수의 개수 N (1 ≤ N ≤ 1,000,000)이 주어진다. 둘째 줄에는 N개의 정수를 공백으로 구분해서 주어진다. 모든
    // 정수는 -1,000,000보다 크거나 같고, 1,000,000보다 작거나 같은 정수이다.
@@ -16,28 +14,13 @@ public class Main {
 
       int add = taja.nextInt(); // 수열 크기 입력
       int[] num = new int[add];
-      int v = taja.nextInt();
-      int max = num[0];
 
-      max = taja.nextInt();
       for (int i = 0; i < num.length; i++) {
          num[i] = taja.nextInt();
-
       }
-      for (int j = 0; j < num.length; j++) {
+      Arrays.sort(num); // 수열의 작은것에서 큰것으로 나열한다.
 
-         if (num[j] > max) {
-            max = num[j];
-
-         }
-         if (num[j] < max) {
-
-            max = num[j];
-         }
-         System.out.print(max + " ");
-      }
-      taja.close();
-
+      System.out.print(num[0] + " " + num[add - 1]);
    }
 
 }
