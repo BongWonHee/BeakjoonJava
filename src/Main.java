@@ -1,13 +1,32 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class Main {
 
+   public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+      int n = scanner.nextInt();
+      int m = scanner.nextInt();
+      int[] box = new int[n] ;
+      int c = 0, d = 0;
+         // int k = scanner.nextInt();
+     for (int b = 0; b < box.length; b++) {
+      box[b]=b+1;
+     }  
+     for (int a = 1; a <= m; a++) {
+         int i = scanner.nextInt();
+         int j = scanner.nextInt();
+         int ii = i - 1;
+         int jj = j - 1;
+         c = box[ii];
+         d = box[jj];
+         box[ii] = d;
+         box[jj] = c;
+   }
 
-   // 첫째 줄에 정수의 개수 N (1 ≤ N ≤ 1,000,000)이 주어진다. 둘째 줄에는 N개의 정수를 공백으로 구분해서 주어진다. 모든
-   // 정수는 -1,000,000보다 크거나 같고, 1,000,000보다 작거나 같은 정수이다.
-
-   // 첫째 줄에 주어진 정수 N개의 최솟값과 최댓값을 공백으로 구분해 출력한다
-
+   for(int num : box){
+      System.out.print(num + " ");
+   }
+   scanner.close();
+}
  
 }
